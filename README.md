@@ -22,7 +22,7 @@ To get started, clone this repo and check that you have all requirements install
 
 
 ```
-git glone ...
+git clone https://github.com/vitostamatti/tabular-transformers.git
 pip install -r requirements.txt
 ``` 
 
