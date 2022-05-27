@@ -42,8 +42,9 @@ go to this [example](/notebooks/example.ipynb).
 ## Roadmap
 
 - [X] First commit of the tabular transformer model.
-- [ ] Benchmark Tabular Transformer with GBT models.
 - [ ] Complete documentation of examples notebooks.
+- [ ] Benchmark Tabular Transformer with GBT models.
+
 
 
 
