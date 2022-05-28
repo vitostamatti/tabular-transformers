@@ -46,7 +46,5 @@ go to this [example](/notebooks/example.ipynb).
 - [ ] Benchmark Tabular Transformer with GBT models.
 
 
-
-
 ## License
 [MIT](LICENSE.TXT)
