@@ -14,7 +14,7 @@ class MultiClassConfusionMatrix(keras.metrics.Metric):
             dtype=tf.dtypes.int32, initializer='zeros'
         )
         
-    def update_state(self, y_true, y_pred):
+    def update_state(self, y_true, y_pred, sample_weight=None):
 
         y_true = tf.argmax(y_true, axis=1)
         y_pred = tf.argmax(y_pred, axis=1)
@@ -45,7 +45,7 @@ class MultiClassMeanRecall(keras.metrics.Metric):
             dtype=tf.dtypes.int32, initializer='zeros'
         )
         
-    def update_state(self, y_true, y_pred):
+    def update_state(self, y_true, y_pred, sample_weight=None):
 
         y_true = tf.argmax(y_true, axis=1)
         y_pred = tf.argmax(y_pred, axis=1)
@@ -78,7 +78,7 @@ class MultiClassMeanPrecision(keras.metrics.Metric):
             dtype=tf.dtypes.int32, initializer='zeros'
         )
         
-    def update_state(self, y_true, y_pred):
+    def update_state(self, y_true, y_pred, sample_weight=None):
 
         y_true = tf.argmax(y_true, axis=1)
         y_pred = tf.argmax(y_pred, axis=1)
