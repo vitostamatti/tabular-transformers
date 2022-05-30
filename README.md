@@ -31,9 +31,9 @@ pip install -r requirements.txt
 In the [notebooks](/notebooks/) directory you can find examples of
 usage for each object in this repo.
 
-- [Layers](/notebooks/layers.ipynb)
-- [Metrics](/notebooks/metrics.ipynb)
-- [Models](/notebooks/models.ipynb)
+- [Layers](/notebooks/layers.ipynb) ([source code](/src/layers.py))
+- [Metrics](/notebooks/metrics.ipynb) ([source code](/src/metrics.py))
+- [Models](/notebooks/models.ipynb) ([source code](/src/models.py))
 
 
 If you want to see a real world use case, 
