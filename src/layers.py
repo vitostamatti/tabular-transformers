@@ -3,15 +3,16 @@ import tensorflow as tf
 import numpy as np
 
 
-
-
 class NumericalFeatureEmbedding(keras.layers.Layer):
     """Transforms continuous features to tokens (embeddings).
     For one feature, the transformation consists of two steps:
-    * the feature is multiplied by a trainable vector
-    * another trainable vector is added
-    Note that each feature has its separate pair of trainable vectors, i.e. the vectors
-    are not shared between features.
+
+        1- The feature is multiplied by a trainable vector
+        2- Another trainable vector is added
+    
+    Note:
+        Each feature has its separate pair of trainable vectors, i.e. the vectors
+        are not shared between features.
 
     Args:
         num_features: the number of continuous (scalar) features
@@ -20,8 +21,7 @@ class NumericalFeatureEmbedding(keras.layers.Layer):
             **Warning**: :code:`use_bias=False` leads to significantly worse results for
             Transformer-like (token-based) architectures.
         initialization: initialization policy for parameters. Must be one of
-            :code:`['uniform', 'normal']`. Let :code:`s = d ** -0.5`. Then, the
-            corresponding distributions are :code:`Uniform(-s, s)` and :code:`Normal(0, s)`.
+            `['uniform', 'normal']`.
     """
 
     def __init__(
@@ -135,12 +135,6 @@ class CategoricalFeatureEmbedding(keras.layers.Layer):
             dtype=tf.float32),
             trainable=True) if self.use_bias else None
 
-        # self.embeddings.build(input_shape=input_shape)
-        # weights = tf.Variable(initial_value=initializer(shape=(sum(self.cardinalities), self.dim_token), dtype=tf.float32),
-        # trainable=True)
-
-        # self.embeddings.set_weights([weights])
-
 
     def call(self, x):
         x = self.embeddings(x + self.category_offsets)
@@ -240,10 +234,8 @@ class MLP(keras.layers.Layer):
 
             if is_last:
                 continue
-
-            act = activation
  
-            layers.append(act)
+            layers.append(activation)
 
         self.mlp = keras.Sequential(layers)
 

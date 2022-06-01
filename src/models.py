@@ -60,7 +60,7 @@ class TabularTransformer(object):
                 keras.metrics.CategoricalAccuracy(name='accuracy'),
                 MultiClassMeanRecall(num_classes=self.output_dim),
                 MultiClassMeanPrecision(num_classes=self.output_dim),
-                MultiClassConfusionMatrix(num_classes=self.output_dim)   
+                # MultiClassConfusionMatrix(num_classes=self.output_dim)   
             ]
         else:
             # loss = tf.keras.losses.MeanSquaredError()
