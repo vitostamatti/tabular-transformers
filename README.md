@@ -45,6 +45,7 @@ go to this [example](/notebooks/example.ipynb).
 - [X] First commit of the tabular transformer model.
 - [ ] Complete documentation of examples notebooks.
 - [ ] Benchmark Tabular Transformer with GBDT models.
+- [ ] Create setup.py to make it pip installable.
 
 
 ## Acknowledgement
